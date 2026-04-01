@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AXON</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>AXON</h1>
+    <p class="subtitle">Your Daily Life System</p>
+
+    <div class="card">
+      <h2>Dashboard</h2>
+      <p id="greeting"></p>
+    </div>
+
+    <div class="card">
+      <h2>Tasks</h2>
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter a task...">
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+    <div class="card">
+      <h2>AI Assistant</h2>
+      <div id="chatBox"></div>
+      <div class="input-group">
+        <input type="text" id="chatInput" placeholder="Ask AXON something...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+        </html>
