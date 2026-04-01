@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0a0f1e, #05080f);
+  color: #e6f1ff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #00ffc3;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #8892b0;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #111827;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,255,195,0.1);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #00ffc3;
+  color: #0a0f1e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  background: #1f2937;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+
+#chatBox {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.user {
+  color: #00ffc3;
+}
+
+.ai {
+  color: #8892b0;
+}
