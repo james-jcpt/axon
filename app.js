@@ -52,7 +52,43 @@ function addTask() {
 loadTasks();
 
 // AI Chat
-function sendMessage() {
+async function sendMessage() {
+  const input = document.getElementById("chatInput");
+  const box = document.getElementById("chatBox");
+
+  if (input.value !== "") {
+    const userText = input.value;
+
+    const userMsg = document.createElement("p");
+    userMsg.textContent = "You: " + userText;
+    userMsg.classList.add("user");
+
+    const aiMsg = document.createElement("p");
+    aiMsg.textContent = "AXON: Thinking...";
+    aiMsg.classList.add("ai");
+
+    box.appendChild(userMsg);
+    box.appendChild(aiMsg);
+
+    input.value = "";
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: userText })
+      });
+
+      const data = await res.json();
+      aiMsg.textContent = "AXON: " + data.reply;
+
+    } catch (error) {
+      aiMsg.textContent = "AXON: Error connecting.";
+    }
+  }
+}
   const input = document.getElementById("chatInput");
   const box = document.getElementById("chatBox");
 
